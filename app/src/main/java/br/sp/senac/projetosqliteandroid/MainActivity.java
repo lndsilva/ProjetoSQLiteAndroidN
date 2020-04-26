@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.lblVisualizaFuncionario:
                 startActivity(new Intent(getApplicationContext(), Funcionarios_Activity.class));
+                break;
         }
 
     }

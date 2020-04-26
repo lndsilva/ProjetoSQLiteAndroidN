@@ -5,6 +5,9 @@ public class Empregados {
     String nome, depto, dataEntrada;
     double salario;
 
+    public Empregados() {
+    }
+
     public Empregados(int id, String nome, String depto, String dataEntrada, double salario) {
         this.id = id;
         this.nome = nome;

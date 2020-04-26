@@ -20,6 +20,7 @@ public class EmpregadoAdapter extends ArrayAdapter<Empregados> {
     List<Empregados> listaEmpregados;
     SQLiteDatabase meuBancoDeDados;
 
+
     public EmpregadoAdapter(Context mCtx, int listaLayoutRes, List<Empregados> listaEmpregados, SQLiteDatabase meuBancoDeDados) {
         super(mCtx, listaLayoutRes, listaEmpregados);
 
@@ -28,6 +29,7 @@ public class EmpregadoAdapter extends ArrayAdapter<Empregados> {
         this.listaEmpregados = listaEmpregados;
         this.meuBancoDeDados = meuBancoDeDados;
     }
+
 
     @NonNull
     @Override
