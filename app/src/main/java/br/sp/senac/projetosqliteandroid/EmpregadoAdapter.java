@@ -70,7 +70,8 @@ public class EmpregadoAdapter extends ArrayAdapter<Empregados> {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(mCtx);
-                builder.setTitle("Você tem certeza?");
+                builder.setTitle("Deseja excluir?");
+                builder.setIcon(android.R.drawable.ic_notification_clear_all);
                 builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -87,7 +88,6 @@ public class EmpregadoAdapter extends ArrayAdapter<Empregados> {
                 });
                 AlertDialog dialog = builder.create();
                 dialog.show();
-
             }
         });
 

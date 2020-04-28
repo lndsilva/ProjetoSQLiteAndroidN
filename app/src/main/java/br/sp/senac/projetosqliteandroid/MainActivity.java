@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText txtNomeEmpregado, txtSalarioEmpregado;
     Spinner spnDepartamentos;
 
+    Button btnAdcionaFuncionario;
+
     SQLiteDatabase meuBancoDeDados;
 
     @Override
@@ -28,12 +31,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        lblEmpregados = (TextView) findViewById(R.id.lblVisualizaFuncionario);
-        txtNomeEmpregado = (EditText) findViewById(R.id.txtNomeNovoFuncionario);
-        txtSalarioEmpregado = (EditText) findViewById(R.id.txtNovoSalarioFuncionario);
-        spnDepartamentos = (Spinner) findViewById(R.id.spnDepartamentos);
+        lblEmpregados = findViewById(R.id.lblVisualizaFuncionario);
+        txtNomeEmpregado = findViewById(R.id.txtNomeNovoFuncionario);
+        txtSalarioEmpregado = findViewById(R.id.txtNovoSalarioFuncionario);
+        spnDepartamentos = findViewById(R.id.spnDepartamentos);
 
-        findViewById(R.id.btnAdicionarfuncionario).setOnClickListener(this);
+        btnAdcionaFuncionario = findViewById(R.id.btnAdicionarfuncionario);
+
+        btnAdcionaFuncionario.setOnClickListener(this);
+
         lblEmpregados.setOnClickListener(this);
 
         //Criando banco de dados
@@ -74,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
         String dataEntrada = simpleDateFormat.format(calendar.getTime());
 
+
         //validando entrada
         if (verificarEntrada(nomeEmpr, salarioEmpr)) {
 
@@ -97,8 +104,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
+    public void onClick(View view) {
+        switch (view.getId()) {
             case R.id.btnAdicionarfuncionario:
 
                 adicionarEmpregado();

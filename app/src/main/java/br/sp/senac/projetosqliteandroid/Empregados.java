@@ -35,4 +35,24 @@ public class Empregados {
     public double getSalario() {
         return salario;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setDepto(String depto) {
+        this.depto = depto;
+    }
+
+    public void setDataEntrada(String dataEntrada) {
+        this.dataEntrada = dataEntrada;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
 }

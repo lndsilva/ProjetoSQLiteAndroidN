@@ -11,10 +11,9 @@ import java.util.List;
 
 public class Funcionarios_Activity extends AppCompatActivity {
     List<Empregados> empregadosList;
+    EmpregadoAdapter empregadoAdapter;
     SQLiteDatabase meuBancoDeDados;
     ListView listViewEmpregados;
-    EmpregadoAdapter empregadoAdapter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
